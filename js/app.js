@@ -1,7 +1,6 @@
 let pwa = new Vue({
   el: '#pwa',
   data: {
-    test: 'Our PWA-APP',
     students: []
   },
   methods: {
