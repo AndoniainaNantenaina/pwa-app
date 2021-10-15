@@ -2,11 +2,18 @@
     'use strict';
 
     var ENTER_KEY = 13;
-    var newTodoDom = document.getElementById('new-todo');
+    var newName = document.getElementById('name');
+    var newPrenom = document.getElementById('prenom');
+    var newDate = document.getElementById('date');
+    var newLieu = document.getElementById('lieu');
+    var newAdresse = document.getElementById('adresse');
+    var newContact = document.getElementById('contact');
+    var newLCourriel = document.getElementById('courriel');
     var syncDom = document.getElementById('sync-wrapper');
+    var bouton = document.getElementById('bouton');
 
-    var db = new PouchDB('todos');
-    var remoteCouch = 'http://127.0.0.1:5984/todos';
+    var db = new PouchDB('pwa-etudiant');
+    var remoteCouch = 'http://127.0.0.1:5984/pwa-etudiant';
 
     db.changes({
         since: 'now',
@@ -14,10 +21,16 @@
     }).on('change', showTodos);
 
     // We have to create a new todo document and enter it in the database
-    function addTodo(text) {
+    function addTodo(name, prenom, date, lieu, adresse, contact) {
         var todo = {
         _id: new Date().toISOString(),
-        title: text,
+        nom: name, 
+        prenom: prenom,
+        date: date,
+        lieu: lieu,
+        adresse: adresse,
+        contact: contact,
+        courriel: courriel,
         completed: false
         };
         db.put(todo, function callback(err, result) {
@@ -192,14 +205,16 @@
     }
 
     function newTodoKeyPressHandler( event ) {
-        if (event.keyCode === ENTER_KEY) {
-        addTodo(newTodoDom.value);
-        newTodoDom.value = '';
-        }
+        // if (event.keyCode === ENTER_KEY) {
+        addTodo(newName.value, newPrenom.value);
+        newName.value = '';
+        newPrenom.value = '';
+        // }
     }
 
+
     function addEventListeners() {
-        newTodoDom.addEventListener('keypress', newTodoKeyPressHandler, false);
+        bouton.addEventListener('click', newTodoKeyPressHandler, false);
     }
 
     addEventListeners();

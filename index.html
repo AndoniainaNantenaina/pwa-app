@@ -10,9 +10,9 @@
     <script src="scripts.js"></script>
 </head>
 <body>
-    <input id="new-todo" placeholder="What needs to be done?" autofocus>
+    <!-- <input id="new-todo" placeholder="What needs to be done?" autofocus> -->
 
-    <div id="sync-wrapper">
+    <div id="sync-wrapper" hidden>
         <div id="sync-active">Connection live. Replicating changes...</div>
         <div id="sync-paused">Connection live. Everything is up to date.</div>
         <div id="sync-reconnecting">Connection lost. Trying to reconnect...</div>
@@ -30,7 +30,7 @@
         <input type="text" name="name" id="name"><br>
         <label for="prenom">Prénom</label><br>
         <input type="text" name="prenom" id="prenom"><br><br>
-        <input type="submit" value="valider"><br>
+        <button id="bouton">Ajouter</button><br>
     </div>
 
     <script src="js/pouchdb-7.2.1.min.js"></script>
