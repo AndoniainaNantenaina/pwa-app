@@ -119,13 +119,13 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                         <label for="input-1">Nom</label>
-                        <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name">
+                        <input type="text" class="form-control" ref="last_name" id="last-name" placeholder="Enter Your Last Name">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                         <label for="input-2">Prénoms</label>
-                        <input type="text" class="form-control" id="input-2" placeholder="Enter Your Email Address">
+                        <input type="text" class="form-control" ref="first_name" id="first_name" placeholder="Enter Your First Name">
                         </div>
                     </div>
                     </div>
@@ -133,13 +133,13 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                         <label for="input-1">Date de naissance</label>
-                        <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name">
+                        <input type="text" class="form-control" ref="date" placeholder="Enter Your Birth Date">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                         <label for="input-2">Lieu de naissance</label>
-                        <input type="text" class="form-control" id="input-2" placeholder="Enter Your Email Address">
+                        <input type="text" class="form-control" ref="lieu" placeholder="Enter Your Birth Place">
                         </div>
                     </div>
                     </div>
@@ -147,13 +147,13 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                         <label for="input-1">Adresse</label>
-                        <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name">
+                        <input type="text" class="form-control" ref="adresse" placeholder="Enter Your Address">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                         <label for="input-2">Contact</label>
-                        <input type="text" class="form-control" id="input-2" placeholder="Enter Your Email Address">
+                        <input type="text" class="form-control" ref="contact" placeholder="Enter Your Contact">
                         </div>
                     </div>
                     </div>
@@ -161,12 +161,12 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                         <label for="input-4">Courriel</label>
-                    <input type="text" class="form-control" id="input-4" placeholder="Enter Password">
+                    <input type="text" class="form-control" ref="mail" placeholder="Enter Your Mail">
                         </div>
                     </div>
                     </div>
                     <div class="form-group">
-                    <button type="submit" class="btn btn-light px-5">Ajouter</button>
+                    <button type="submit" class="btn btn-light px-5" @click="addStudent()">Ajouter</button>
                     </div>
                 </form>
                 </div>
