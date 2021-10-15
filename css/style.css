@@ -16,3 +16,8 @@ nav{
   nav a.selected{
       font-weight: bold;
   }
+
+img {
+    width: 100px;
+    height: auto;
+}

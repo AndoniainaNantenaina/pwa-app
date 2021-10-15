@@ -1,6 +1,6 @@
 const CACHE_NAME = "V1";
 // const CACHE_NAME = "V2";
-const STATIC_CACHE_URLS = ["icons/logo-180.png", "css/style.css", "scripts.js", "index.html", "apropos.html", "etudiants.html"];
+const STATIC_CACHE_URLS = ["icons/logo-180.png", "css/style.css", "scripts.js", "index.html", "apropos.html", "etudiants.html", "assets/images/gallery/Grace.jpg", "assets/images/gallery/Praise.png", "assets/images/gallery/Ando.jpg", "assets/images/gallery/mama.jpg", "assets/images/gallery/Dylan.jpg"];
 
 self.addEventListener("install", event => {
     console.log("Service Worker installing.");
