@@ -60,6 +60,9 @@ let pwa = new Vue({
       console.log(data.nom);
     }
   },
+  mounted() {
+
+  },
   created() {
     this.showAllStudent();
   }
