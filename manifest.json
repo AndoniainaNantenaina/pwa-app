@@ -9,7 +9,7 @@
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "icons/logo-180.png",
+            "src": "assets/icons/logo-180.png",
             "sizes": "180x180"
         }
     ]
