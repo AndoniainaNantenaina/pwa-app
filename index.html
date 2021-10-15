@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue-app</title>
+    <title>PWA-APP</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="manifest.json">
+
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet"/>
+    <script src="assets/js/pace.min.js"></script>
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon-vision.ico" type="image/x-icon">
+    <!-- Vector CSS -->
+    <link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
+    <!-- simplebar CSS-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+    <!-- Bootstrap core CSS-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- animate CSS-->
+    <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+    <!-- Icons CSS-->
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+    <!-- Sidebar CSS-->
+    <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
+    <!-- Custom Style-->
+
+    <link href="assets/css/app-style.css" rel="stylesheet"/>
     <script src="js/vue2.6.14.js"></script>
     <script src="scripts.js"></script>
 </head>
-<body>
+<body class="bg-theme bg-theme11">
     <!-- <input id="new-todo" placeholder="What needs to be done?" autofocus> -->
 
-    <div id="sync-wrapper" hidden>
+    <!-- <div id="sync-wrapper" hidden>
         <div id="sync-active">Connection live. Replicating changes...</div>
         <div id="sync-paused">Connection live. Everything is up to date.</div>
         <div id="sync-reconnecting">Connection lost. Trying to reconnect...</div>
@@ -31,7 +52,183 @@
         <label for="prenom">Prénom</label><br>
         <input type="text" name="prenom" id="prenom"><br><br>
         <button id="bouton">Ajouter</button><br>
+    </div> -->
+
+    <div id="pwa">
+        <!-- Start wrapper-->
+        <div id="wrapper">
+        
+            <!--Start sidebar-wrapper-->
+            <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+            <div class="brand-logo">
+                <a href="index.html">
+                <img src="assets/images/logo512.png" class="logo-icon" alt="logo icon">
+                <h5 class="logo-text">Vision Etudiant</h5>
+                </a>
+            </div>
+            <ul class="sidebar-menu do-nicescrol">
+                <li class="sidebar-header">NAVIGATION</li>
+                <li>
+                <a href="index.html">
+                    <i class="zmdi zmdi-view-dashboard"></i> <span>Accueil</span>
+                </a>
+                </li>
+        
+                <li>
+                <a href="etudiants.html">
+                    <i class="zmdi zmdi-format-list-bulleted"></i> <span>Etudiants</span>
+                </a>
+                </li>
+        
+                <li>
+                <a href="apropos.html">
+                    <i class="zmdi zmdi-grid"></i> <span>A propos</span>
+                </a>
+                </li>
+            
+            </div>
+            <!--End sidebar-wrapper-->
+        
+        <!--Start topbar header-->
+        <header class="topbar-nav">
+        <nav class="navbar navbar-expand fixed-top">
+            <ul class="navbar-nav mr-auto align-items-center">
+            <li class="nav-item">
+                <a class="nav-link toggle-menu" href="javascript:void();">
+                <i class="icon-menu menu-icon"></i>
+            </a>
+            </li>
+            </ul>
+        </nav>
+        </header>
+        <!--End topbar header-->
+        
+        <div class="clearfix"></div>
+            
+            <div class="content-wrapper">
+            <div class="container-fluid">
+        
+            <!--Start Dashboard Content-->
+        
+            <div class="card mt-3">
+            <div class="card-content">
+                <div class="row row-group m-0">
+                    <div class="col-12 col-lg-6 col-xl-3 border-light">
+                        <div class="card-body">
+                            <h5 class="text-white mb-0">Nombre d'étudiants</h5>
+                            <div class="progress my-3" style="height:3px;">
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                            <p class="mb-0 text-white small-font">Total <span class="float-right">5</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3 border-light">
+                        <div class="card-body">
+                            <h5 class="text-white mb-0">Etudiants certifiés</span></h5>
+                            <div class="progress my-3" style="height:3px;">
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                            <p class="mb-0 text-white small-font">Total <span class="float-right">0</span></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3 border-light">
+                        <div class="card-body">
+                            <h5 class="text-white mb-0">Nombres d'enseignants</h5>
+                            <div class="progress my-3" style="height:3px;">
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                            <p class="mb-0 text-white small-font">Total <span class="float-right">2</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3 border-light">
+                        <div class="card-body">
+                            <h5 class="text-white mb-0">Entreprises partenaires</h5>
+                            <div class="progress my-3" style="height:3px;">
+                                <div class="progress-bar" style="width:55%"></div>
+                            </div>
+                            <p class="mb-0 text-white small-font">Total <span class="float-right">2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <div class="row">
+            <div class="col-12 col-lg-12">
+                <div class="card">
+                <div class="card-header">Etudiants récents
+                    </div>
+                    <div class="table-responsive">
+                    <table class="table align-items-center table-flush table-borderless">
+                        <thead>
+                        <th>Nom</th>
+                        <th>Prénoms</th>
+                        <th>Date de naissance</th>
+                        <th>Lieu de naissance</th>
+                        <th>Adresse</th>
+                        <th>Contact</th>
+                        <th>Courriel</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>RAZAKAMAHERY</td>
+                            <td>Nomena Christian</td>
+                            <td>1998-01-25</td>
+                            <td>Befelatanana</td>
+                            <td>Ambolokandrina</td>
+                            <td>034 29 060 58</td>
+                            <td>christian@email.com</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+            </div><!--End Row-->
+        
+                <!--End Dashboard Content-->
+                
+            <!--start overlay-->
+            <div class="overlay toggle-menu"></div>
+                <!--end overlay-->
+                
+            </div>
+            <!-- End container-fluid-->
+            
+            </div><!--End content-wrapper-->
+            <!--Start Back To Top Button-->
+            <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+            <!--End Back To Top Button-->
+            
+            <!--Start footer-->
+            <footer class="footer">
+                <div class="container">
+                <div class="text-center">
+                    Copyright © 2021
+                </div>
+                </div>
+            </footer>
+            <!--End footer-->
+            
+        </div><!--End wrapper-->
     </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+    <!-- simplebar js -->
+    <script src="assets/plugins/simplebar/js/simplebar.js"></script>
+    <!-- sidebar-menu js -->
+    <script src="assets/js/sidebar-menu.js"></script>
+    <!-- loader scripts -->
+    <script src="assets/js/jquery.loading-indicator.js"></script>
+    <!-- Custom scripts -->
+    <script src="assets/js/app-script.js"></script>
+
+    <!-- Index js -->
+    <script src="assets/js/index.js"></script>
 
     <script src="js/pouchdb-7.2.1.min.js"></script>
     <script src="js/app.js"></script>
