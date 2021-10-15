@@ -151,44 +151,40 @@
                     </div>
                 </div>
             </div>
-            <button @click="showAllStudent()">Aingana</button>
         </div>
-            
             <div class="row">
-            <div class="col-12 col-lg-12">
-                <div class="card">
-                <div class="card-header">Etudiants récents
-                    </div>
-                    <div class="table-responsive">
-                    <table class="table align-items-center table-flush table-borderless">
-                        <thead>
-                        <th>Nom</th>
-                        <th>Prénoms</th>
-                        <th>Date de naissance</th>
-                        <th>Lieu de naissance</th>
-                        <th>Adresse</th>
-                        <th>Contact</th>
-                        <th>Courriel</th>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>RAZAKAMAHERY</td>
-                            <td>Nomena Christian</td>
-                            <td>1998-01-25</td>
-                            <td>Befelatanana</td>
-                            <td>Ambolokandrina</td>
-                            <td>034 29 060 58</td>
-                            <td>christian@email.com</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div class="col-12 col-lg-12">
+                    <div class="card">
+                    <div class="card-header">Etudiants récents
+                        </div>
+                        <div class="table-responsive">
+                        <table class="table align-items-center table-flush table-borderless">
+                            <thead>
+                                <th>Nom</th>
+                                <th>Prénoms</th>
+                                <th>Date de naissance</th>
+                                <th>Lieu de naissance</th>
+                                <th>Adresse</th>
+                                <th>Contact</th>
+                                <th>Courriel</th>
+                            </thead>
+                            <tbody v-for="student in students">
+                                <tr>
+                                    <td>{{ student.nom }}</td>
+                                    <td>{{ student.prenoms }}</td>
+                                    <td>{{ student.date_de_naissance }}</td>
+                                    <td>{{ student.lieu_de_naissance }}</td>
+                                    <td>{{ student.adresse }}</td>
+                                    <td>{{ student.contact }}</td>
+                                    <td>{{ student.couriel }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div><!--End Row-->
-        
-                <!--End Dashboard Content-->
-                
+            
             <!--start overlay-->
             <div class="overlay toggle-menu"></div>
                 <!--end overlay-->

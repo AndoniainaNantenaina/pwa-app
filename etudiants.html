@@ -181,27 +181,27 @@
                 <h5 class="card-title">Liste étudiant</h5>
                 <div class="table-responsive">
                     <table class="table">
-                    <thead>
-                        <th>Nom</th>
-                        <th>Prénoms</th>
-                        <th>Date de naissance</th>
-                        <th>Lieu de naissance</th>
-                        <th>Adresse</th>
-                        <th>Contact</th>
-                        <th>Courriel</th>
-                        <th>Actions</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td>RAZAKAMAHERY</td>
-                        <td>Nomena Christian</td>
-                        <td>1998-01-25</td>
-                        <td>Befelatanana</td>
-                        <td>Ambolokandrina</td>
-                        <td>034 29 060 58</td>
-                        <td>christian@email.com</td>
-                        </tr>
-                    </tbody>
+                        <thead>
+                            <th>Nom</th>
+                            <th>Prénoms</th>
+                            <th>Date de naissance</th>
+                            <th>Lieu de naissance</th>
+                            <th>Adresse</th>
+                            <th>Contact</th>
+                            <th>Courriel</th>
+                            <th>Actions</th>
+                        </thead>
+                        <tbody v-for="student in students">
+                            <tr>
+                                <td>{{ student.nom }}</td>
+                                <td>{{ student.prenoms }}</td>
+                                <td>{{ student.date_de_naissance }}</td>
+                                <td>{{ student.lieu_de_naissance }}</td>
+                                <td>{{ student.adresse }}</td>
+                                <td>{{ student.contact }}</td>
+                                <td>{{ student.couriel }}</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
                 </div>
