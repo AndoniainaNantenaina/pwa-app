@@ -1,5 +1,5 @@
 {
-    "name": "pwa-app by Ando Christian Dylan Praise",
+    "name": "pwa-app by Ando Christian Dylan Praise Grace",
     "short_name": "pwa-app",
     "theme_color": "blue",
     "background_color": "#ffffff",
@@ -7,7 +7,7 @@
     "scope": "/",
     "start_url": "/pwa-app",
     "prefer_related_applications": false,
-    "icons":[
+    "icons": [
         {
             "src": "icons/logo-180.png",
             "sizes": "180x180"
