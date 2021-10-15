@@ -45,7 +45,7 @@ function refresh(response) {
 const delay = ms => _ => new Promise(resolve => setTimeout(() => resolve(_), ms))
 
 function update(request) {
-  return fetch(request.url + `?per_page=${Math.ceil(Math.random() * 10)}`).then(delay(3000)).then(
+  return fetch(request.url).then(
     response =>
       cache(request, response) // on peut mettre en cache la réponse
         .then(() => response) // résout la promesse avec l'objet Response
